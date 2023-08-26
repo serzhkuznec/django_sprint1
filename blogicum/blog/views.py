@@ -75,7 +75,7 @@ def post_detail(request, post_id):
     template = 'blog/detail.html'
     try:
         context = {'post': posts[post_id]}
-    except post_id == None:
+    except post_id is None:
         raise Http404(' Страница не найдена ')
     return render(request, template, context)
 
